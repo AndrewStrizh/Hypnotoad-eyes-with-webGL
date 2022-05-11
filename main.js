@@ -140,28 +140,14 @@ float depth(int c, float m){
   
   float x = vPos[0];
   float y = vPos[1];
-  float x0;
-  float y0;
-  if (c == 0){ 
-    x0 = v1[0];
-    y0 = v1[1];
-  };
-  if (c == 1){
-    x0 = v2[0];
-    y0 = v2[1];
-  };
-  if (c == 2){
-    x0 = v3[0];
-    y0 = v3[1];
-  };
-  if (c == 3){
-    x0 = v4[0];
-    y0 = v4[1];
-  };
-
+  float x0 = 0.0;
+  float y0 = 0.0;
+  if (c == 0){x0 = v1[0]; y0 = v1[1];};
+  if (c == 1){x0 = v2[0]; y0 = v2[1];};
+  if (c == 2){x0 = v3[0]; y0 = v3[1];};
+  if (c == 3){x0 = v4[0]; y0 = v4[1];};
   x = x - x0;
   y = y - y0;
-
   float value = m - sqrt(x*x+y*y);
   if (value <= 0.0){value = 0.0;};
   return value;

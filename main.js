@@ -15,7 +15,7 @@ onload = () => {
         makeLeftEye();
         GL.uniform1f(Time, time/100);
         GL.uniform1f(Sm, -1.5);
-        GL.clearColor(0.596078, 0.403922, 0.00392, 1);
+        GL.clearColor(0.572, 0.549, 0.00392, 1);
         GL.clear(GL.COLOR_BUFFER_BIT | GL.DEPTH_BUFFER_BIT)
         GL.enableVertexAttribArray(coord);
         GL.drawArrays(GL.TRIANGLES, 0, 6);
@@ -168,9 +168,9 @@ float depth(int c, float m){
 }
 
 void main() {
-    color = vec4(0.596078, 0.403922, 0.00392, 1);
-    if (depth(0, 0.9) + depth(1, 0.9) + depth(2, 0.9) + depth(3, 0.9) > 0.9){color = vec4(1, 1, 0, 1);};
-    if (depth(0, 0.8) + depth(1, 0.81) + depth(2, 0.8) + depth(3, 0.8) > 0.9){color = vec4(1, 0, 0, 1);};
+    color = vec4(0.572, 0.549, 0.00392, 1);
+    if (depth(0, 0.9) + depth(1, 0.9) + depth(2, 0.9) + depth(3, 0.9) > 0.9){color = vec4(0.984, 0.878, 0.403, 1);};
+    if (depth(0, 0.8) + depth(1, 0.81) + depth(2, 0.8) + depth(3, 0.8) > 0.9){color = vec4(0.541, 0.321, 0.082, 1);};
     if (depth(0, 0.87) + depth(1, 0.86) + depth(2, 0.87) + depth(3, 0.87) > 1.4){color = vec4(0, 0, 0, 1);};
 }
 `;
